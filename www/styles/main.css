@@ -1,0 +1,46 @@
+body {
+	font-family: monospace;
+	font-size: 1.5rem;
+}
+
+div#header, div#continued-header {
+	text-align: center;
+}
+
+
+div#end-section {
+	font-size: smaller;
+}
+
+@media (orientation: landscape) {
+	body {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+	a:link {
+		color: lightskyblue;	
+	}
+	a:visited {
+		color: mediumpurple;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: white;
+		color: black;
+	}
+	a:link {
+		color: #0000EE;
+	}
+	a:visited {
+		color: #551A8B;
+	}
+}

@@ -1,0 +1,13 @@
+= Arjun Satarkar
+
+[#continued-header]
+====
+email: me@arjunsatarkar.net
+====
+
+'''
+
+* link:projects[]
+* &#127775;
+
+include::shared_end_section.adoc[]

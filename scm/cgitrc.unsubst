@@ -1,0 +1,13 @@
+#
+# cgit config
+# see cgitrc(5) for details
+
+css=/cgit.css
+logo=/cgit.png
+remove-suffix=1
+readme=:README.txt
+readme=:README.adoc
+readme=:README.md
+readme=:README
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+scan-path=%cgit scan path%

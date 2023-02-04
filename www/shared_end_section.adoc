@@ -1,0 +1,7 @@
+
+'''
+
+[#end-section]
+====
+This work is licensed under a link:cc_by_4-0.txt[Creative Commons Attribution 4.0 International License].
+====

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/), modified by hand -->
+
+<svg
+   version="1.1"
+   id="svg9"
+   width="750"
+   height="750"
+   viewBox="0 0 750 750"
+   sodipodi:docname="arjun_hitomezashi.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   style="background-color: #FFFFFF;">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.112"
+     inkscape:cx="375"
+     inkscape:cy="375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g15" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g15">
+    <rect width="100%" height="100%" fill="white" />
+    <path
+       style="fill:black"
+       d="M 15,750 H 0 v -75 -75 h 15 15 v 75 75 z m 450,0 h -15 v -75 -75 h 75 75 v -75 -75 h 75 75 v 15 15 h -60 -60 v 75 75 h -75 -75 v 60 60 z M 240,630 H 150 V 555 480 H 75 0 v -90 -90 h 15 15 v 75 75 h 75 75 v 75 75 h 60 60 v -75 -75 h 75 75 v -75 -75 h 75 75 V 240 180 H 525 450 V 105 30 H 375 300 V 15 0 h 90 90 v 75 75 h 75 75 v 90 90 h -75 -75 v 75 75 h -75 -75 v 75 75 z m 0,-300 h -90 v -90 -90 h 90 90 v 90 90 z m 0,-30 h 60 v -60 -60 h -60 -60 v 60 60 z M 15,150 H 0 V 75 0 h 75 75 V 15 30 H 90 30 v 60 60 z M 675,30 H 600 V 15 0 h 75 75 v 15 15 z"
+       id="path761" />
+  </g>
+</svg>
