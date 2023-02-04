@@ -9,5 +9,5 @@ readme=:README.txt
 readme=:README.adoc
 readme=:README.md
 readme=:README
-about-filter=/usr/lib/cgit/filters/about-formatting.sh
-scan-path=%cgit scan path%
+about-filter=%cgit root%/cgit_adoc_about_formatter.py
+scan-path=%cgit root%/cgit_scan_path

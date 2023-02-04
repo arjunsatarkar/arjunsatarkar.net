@@ -5,7 +5,7 @@ parent_dir = pathlib.Path(__file__).parent.resolve()
 
 substs = {
 	"%www.arjunsatarkar.net webroot%": lambda: str(parent_dir / "www/public"),
-	"%cgit scan path%": lambda: str(parent_dir / "scm/cgit_scan_path"),
+	"%cgit root%": lambda: str(parent_dir / "scm"),
 }
 
 def find_unsubst_files(base=pathlib.Path(__file__).parent.resolve(), max_depth=1):
