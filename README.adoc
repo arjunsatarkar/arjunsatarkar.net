@@ -1,6 +1,6 @@
 = arjunsatarkar.net
 
-Prerequisites: https://just.systems/[just], https://www.python.org/downloads/[Python 3], https://nginx.org/[Nginx], https://git.zx2c4.com/cgit/about/[cgit], https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/[fcgiwrap], https://asciidoctor.org/[asciidoctor].
+Prerequisites: https://just.systems/[just], https://www.python.org/downloads/[Python 3], https://nginx.org/[Nginx], https://git.zx2c4.com/cgit/about/[cgit], https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/[fcgiwrap], https://asciidoctor.org/[Asciidoctor].
 
 . Run `+just+` in the repository root to build.
 . Include `+nginx.conf+` from your system Nginx configuration file.
