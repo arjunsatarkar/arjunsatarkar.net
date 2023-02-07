@@ -1,6 +1,6 @@
 FROM docker.io/nginx:1.23-alpine
 
-RUN apk add cgit git fcgiwrap python3 asciidoctor
+RUN apk add cgit git fcgiwrap python3 py3-beautifulsoup4 asciidoctor
 RUN rm /etc/nginx/conf.d/*
 
 COPY nginx.conf /etc/nginx/conf.d/scm.arjunsatarkar.net.conf

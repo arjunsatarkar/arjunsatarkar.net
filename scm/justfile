@@ -1,0 +1,2 @@
+build-image:
+	podman build -t scm.arjunsatarkar.net .

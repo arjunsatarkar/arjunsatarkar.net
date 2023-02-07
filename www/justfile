@@ -1,4 +1,7 @@
-all:
+build-site:
 	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss=styles/main.css -a docinfo=shared-head,shared-header -a docinfodir=docinfo -D public sitesrc/*.adoc
 	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss=styles/main.css -a docinfo=shared-head -a docinfodir=docinfo -D public sitesrc/index.adoc
 	cp -f sitesrc/favicon.svg sitesrc/cc_by_4-0.txt public/
+
+build-image:
+	podman build -t www.arjunsatarkar.net .	
