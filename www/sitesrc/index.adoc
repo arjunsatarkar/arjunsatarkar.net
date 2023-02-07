@@ -1,0 +1,15 @@
+= Arjun Satarkar
+
+[#continued-header]
+====
+email: me@arjunsatarkar.net
+====
+
+'''
+
+* blog (eventually!)
+* https://scm.arjunsatarkar.net[miscellaneous projects]
+
+&#127775;
+
+include::inclusions/shared_end_section.adoc[]

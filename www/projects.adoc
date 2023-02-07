@@ -1,6 +1,0 @@
-= Projects
-
-* https://scm.arjunsatarkar.net/arjunsatarkar.net[arjunsatarkar.net (this website)]
-* https://scm.arjunsatarkar.net/8hash[8hash]
-
-include::shared_end_section.adoc[]

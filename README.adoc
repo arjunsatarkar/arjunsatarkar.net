@@ -1,8 +1,1 @@
 = arjunsatarkar.net
-
-Prerequisites: https://just.systems/[just], https://www.python.org/downloads/[Python 3], https://nginx.org/[Nginx], https://git.zx2c4.com/cgit/about/[cgit], https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/[fcgiwrap], https://asciidoctor.org/[Asciidoctor], https://beautiful-soup-4.readthedocs.io/en/latest/#installing-beautiful-soup[Beautiful Soup].
-
-. Run `+just+` in the repository root to build.
-. Include `+nginx.conf+` from your system Nginx configuration file.
-. Include `+scm/cgitrc+` from your system cgitrc configuration file.
-. Make sure nginx is running.

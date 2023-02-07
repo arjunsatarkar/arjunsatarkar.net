@@ -1,0 +1,12 @@
+FROM docker.io/nginx:1.23
+
+RUN apt-get update
+RUN apt-get install -y cgit git fcgiwrap python3 asciidoctor
+RUN rm /etc/nginx/conf.d/*
+
+COPY nginx.conf /etc/nginx/conf.d/scm.arjunsatarkar.net.conf
+COPY cgitrc /etc/cgitrc
+COPY cgit_adoc_about_formatter.py /
+COPY entrypoint.sh /
+
+ENTRYPOINT /entrypoint.sh

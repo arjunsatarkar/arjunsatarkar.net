@@ -1,0 +1,9 @@
+css=/cgit.css
+logo=/cgit.png
+remove-suffix=1
+readme=:README.txt
+readme=:README.adoc
+readme=:README.md
+readme=:README
+about-filter=/cgit_adoc_about_formatter.py
+scan-path=/mnt/cgit_scan_path

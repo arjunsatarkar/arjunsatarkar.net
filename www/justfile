@@ -1,9 +1,4 @@
-all: compile_asciidoc copy_static_files
-
-compile_asciidoc:
-	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a docinfo=shared-head,shared-header -D public *.adoc
-	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a docinfo=shared-head -D public index.adoc
-
-copy_static_files:
-	cp -f styles/* public/styles
-	cp -f favicon.svg cc_by_4-0.txt public
+all:
+	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss=styles/main.css -a docinfo=shared-head,shared-header -a docinfodir=docinfo -D public sitesrc/*.adoc
+	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss=styles/main.css -a docinfo=shared-head -a docinfodir=docinfo -D public sitesrc/index.adoc
+	cp -f sitesrc/favicon.svg sitesrc/cc_by_4-0.txt public/
