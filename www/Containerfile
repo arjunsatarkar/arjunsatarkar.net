@@ -2,7 +2,7 @@
 
 FROM docker.io/python:3.11-alpine3.17
 
-RUN apk add just asciidoctor python3
+RUN apk add just asciidoctor
 RUN pip3 install bottle
 
 WORKDIR /site
