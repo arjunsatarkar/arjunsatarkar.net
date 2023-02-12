@@ -1,2 +1,5 @@
 build-image:
 	podman build -t scm.arjunsatarkar.net .
+
+run-image:
+	podman run --name scm.arjunsatarkar.net -dp 127.0.0.1:27702:80 -v ~/Documents/git:/mnt/cgit_scan_path scm.arjunsatarkar.net

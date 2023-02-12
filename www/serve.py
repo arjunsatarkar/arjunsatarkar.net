@@ -1,29 +1,30 @@
 import bottle
-import json
 import os
 import pathlib
+import sys
 
 PORT = 80
+if len(sys.argv) > 1:
+	PORT = int(sys.argv[1])
 
 parent = pathlib.Path(__file__).parent.resolve()
-public = parent / "public"
+webroot = parent/"webroot"
 
-map = None
-with open(parent / "map.json", "r") as map_file:
-	map = json.load(map_file)
+@bottle.route("/")
+def serve_index():
+	return bottle.static_file("index.html", root=webroot)
 
-@bottle.route("/styles/<style>")
-def serve_styles(style):
-	return bottle.static_file(style, root=public / "styles")
+@bottle.route("/index")
+def reject_noncanonical_index():
+	return bottle.HTTPError(404)
 
-@bottle.route("<path:path>")
-def serve_from_map(path):
-	try:
-		file_name = map[path]
-	except KeyError:
-		return bottle.HTTPError(404)
-	if file_name.endswith(".adoc"):
-		file_name = file_name.removesuffix(".adoc") + ".html"
-	return bottle.static_file(file_name, root=public)
+@bottle.route("/<path:path>")
+def serve(path):
+	if os.path.isfile(webroot / (path + ".html")):
+		return bottle.static_file(path + ".html", root=webroot)
+	else:
+		if path.endswith(".html"):
+			return bottle.HTTPError(404)
+		return bottle.static_file(path, root=webroot)
 
 bottle.run(host="0.0.0.0", port=PORT)
