@@ -31,6 +31,14 @@ def serve_media(media):
     return bottle.static_file(media, root=webroot / "media")
 
 
+# We prefer /media/favicon.svg, but when we have no explicit link to that in
+# the <head> - eg. because the file we are serving is not HTML - then the
+# browser will fall back to this location in most cases.
+@bottle.route("/favicon.ico")
+def serve_favicon_default_location():
+    bottle.redirect("/media/favicon.ico", 301)
+
+
 @bottle.route("/<content>")
 def serve(content):
     if os.path.isfile(webroot / "content" / (content + ".html")):
