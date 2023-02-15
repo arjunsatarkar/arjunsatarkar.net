@@ -12,4 +12,4 @@ email: me@arjunsatarkar.net
 
 &#127775;
 
-include::inclusions/shared_end_section.adoc[]
+include::../inclusions/shared_end_section.adoc[]

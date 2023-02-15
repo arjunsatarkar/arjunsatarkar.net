@@ -1,0 +1,13 @@
+build-site:
+	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss! -a docinfo=shared-head,shared-header -a docinfodir=../docinfo -D webroot/content sitesrc/adoc_content/*.adoc
+	asciidoctor -a webfonts! -a last-update-label! -a stylesheet=main.css -a stylesdir=styles -a linkcss -a copycss! -a docinfo=shared-head -a docinfodir=../docinfo -D webroot/content sitesrc/adoc_content/index.adoc
+	-mkdir -p webroot/media webroot/content webroot/styles
+	cp -f sitesrc/media/* webroot/media/
+	cp -f sitesrc/other_content/* webroot/content/
+	cp -f sitesrc/styles/* webroot/styles/
+
+build-image:
+	podman build -t www.arjunsatarkar.net .	
+
+run-container:
+	podman run --name www.arjunsatarkar.net -dp 127.0.0.1:27701:27701 -v ./sitesrc:/site/sitesrc www.arjunsatarkar.net

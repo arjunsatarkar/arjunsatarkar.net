@@ -8,7 +8,7 @@ COPY . .
 
 RUN just
 # We will mount it from outside so we can update from outside
-RUN rm -rf contentsrc
+RUN rm -rf sitesrc
 
 CMD ["python3", "serve.py"]
-EXPOSE 80
+EXPOSE 27701
