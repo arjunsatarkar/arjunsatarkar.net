@@ -4,7 +4,10 @@ gevent.monkey.patch_all()
 import bottle
 import os
 import pathlib
+import signal
 import sys
+
+signal.signal(signal.SIGTERM, lambda _1, _2: sys.exit())
 
 PORT = 27701
 if len(sys.argv) > 1:
