@@ -6,6 +6,9 @@ build-site:
 	cp -f sitesrc/other_content/* webroot/content/
 	cp -f sitesrc/styles/* webroot/styles/
 
+format:
+	black *.py
+
 build-image:
 	podman build -t www.arjunsatarkar.net .	
 

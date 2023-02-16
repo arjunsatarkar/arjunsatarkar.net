@@ -1,3 +1,6 @@
+import gevent.monkey
+
+gevent.monkey.patch_all()
 import bottle
 import os
 import pathlib
@@ -52,4 +55,4 @@ def serve_404(error):
     return bottle.static_file("404.html", root=parent)
 
 
-bottle.run(host="0.0.0.0", port=PORT)
+bottle.run(host="0.0.0.0", port=PORT, server="gevent")
