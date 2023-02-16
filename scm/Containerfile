@@ -7,5 +7,6 @@ COPY nginx.conf /etc/nginx/conf.d/scm.arjunsatarkar.net.conf
 COPY cgitrc /etc/cgitrc
 COPY cgit_adoc_about_formatter.py /
 COPY entrypoint.sh /
+COPY header.html /
 
 ENTRYPOINT /entrypoint.sh

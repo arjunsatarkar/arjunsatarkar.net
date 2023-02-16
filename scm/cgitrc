@@ -7,4 +7,7 @@ readme=:README.md
 readme=:README
 about-filter=/cgit_adoc_about_formatter.py
 enable-index-owner=no
+root-desc=source code and version control for Arjun Satarkar's projects
+header=/header.html
+favicon=https://www.arjunsatarkar.net/media/favicon.ico
 scan-path=/mnt/cgit_scan_path

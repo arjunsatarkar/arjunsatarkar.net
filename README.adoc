@@ -9,11 +9,16 @@ It can be run in a container (eg. Podman, Docker) or without.
 
 Prerequisites:
 
+Must always be installed:
 * https://just.systems/[just]
-* https://asciidoctor.org/[Asciidoctor] (not necessary if containerized)
-* https://www.python.org/[Python 3] (not necessary if containerized)
-* https://bottlepy.org/[Bottle] (not necessary if containerized)
-* https://podman.io/[Podman] (only necessary if containerized)
+Need not be explicitly installed for containerized usage:
+* https://asciidoctor.org/[Asciidoctor]
+* https://www.python.org/[Python 3]
+* https://bottlepy.org/[Bottle]
+* https://www.gevent.org/[Gevent]
+Must only be installed for containerized usage:
+* https://podman.io/[Podman]
+** or compatible equivalent like https://docker.com/[Docker], but alias it `+podman+` or adjust `+Justfile+`s to match
 
 === Uncontainerized operation
 
