@@ -6,4 +6,5 @@ readme=:README.adoc
 readme=:README.md
 readme=:README
 about-filter=/cgit_adoc_about_formatter.py
+enable-index-owner=no
 scan-path=/mnt/cgit_scan_path
