@@ -3,3 +3,6 @@ build-image:
 
 run-container:
 	podman run --name scm.arjunsatarkar.net -dp 127.0.0.1:27702:80 -v ~/Documents/git:/mnt/cgit_scan_path scm.arjunsatarkar.net
+
+format:
+	black *.py
