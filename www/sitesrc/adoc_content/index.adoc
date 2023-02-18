@@ -8,7 +8,7 @@ email: me@arjunsatarkar.net
 '''
 
 * blog (eventually!)
-* https://scm.arjunsatarkar.net[source code and version control]
+* https://scm.arjunsatarkar.net[version control]
 
 &#127775;
 
