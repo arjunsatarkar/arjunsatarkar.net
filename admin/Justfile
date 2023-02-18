@@ -1,0 +1,7 @@
+all: homarr glances
+
+homarr:
+	podman run --name homarr --rm -v ./homarr/configs:/app/data/configs -v ./homarr/icons:/app/public/icons -p 127.0.0.1:27703:7575 -d ghcr.io/ajnart/homarr:latest
+
+glances:
+	podman run --name glances --rm --pid host -e GLANCES_OPT="-w -p 27704" -p 127.0.0.1:27704:27704 -dit docker.io/nicolargo/glances:latest 
