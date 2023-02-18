@@ -1,29 +1,24 @@
 = arjunsatarkar.net
 
-This is the source repository for Arjun Satarkar's personal website.
+This is the source repository for Arjun Satarkar's personal website. It is composed of several parts.
+
+Prerequisite for all components: https://just.systems/[Just]
 
 == www
 
-This is an HTTP server intended to be mapped by a reverse proxy to www.arjunsatarkar.net.
+This is an HTTP server intended to be mapped by a reverse proxy to https://www.arjunsatarkar.net/.
 It can be run in a container (eg. Podman, Docker) or without.
 
 Prerequisites:
 
-Must always be installed:
-
-* https://just.systems/[just]
-
-Need not be explicitly installed for containerized usage:
-
-* https://asciidoctor.org/[Asciidoctor]
-* https://www.python.org/[Python 3]
-* https://bottlepy.org/[Bottle]
-* https://www.gevent.org/[Gevent]
-
-Must only be installed for containerized usage:
-
-* https://podman.io/[Podman]
-** or compatible equivalent like https://docker.com/[Docker], but alias it `podman` or some adjustment will be needed
+* Must only be explicitly installed for uncontainerized usage:
+** https://asciidoctor.org/[Asciidoctor]
+** https://www.python.org/[Python 3]
+** https://bottlepy.org/[Bottle]
+** https://www.gevent.org/[Gevent]
+* Must only be installed for containerized usage:
+** https://podman.io/[Podman]
+*** or compatible equivalent like https://docker.com/[Docker], but alias it `podman` or some adjustment will be needed
 
 === Uncontainerized operation
 
@@ -41,3 +36,34 @@ To run: run `+just run-container+` in the `+www+` directory.
 
 After changing something in `+www/sitesrc+`, run `+www/trigger_rebuild.sh+` to update the served site.
 
+== scm
+
+This is a containerized wrapper around https://git.zx2c4.com/cgit/[Cgit] and an https://nginx.org/[Nginx] server. It listens on localhost port 27702, and should be reverse proxied to https://scm.arjunsatarkar.net/.
+
+Prerequisite: https://podman.io/[Podman]
+
+To build: run `+just build-image+` in the `+scm+` directory.
+
+To run: run `+just run-container+` in the `+scm+` directory.
+
+== admin
+
+The `+Justfile+` in this directory runs https://homarr.dev/[Homarr] and https://nicolargo.github.io/glances/[Glances] in containers, mapped to localhost ports 27703 and 27704 respectively. They should be reverse proxied to https://admin.arjunsatarkar.net/ - the latter to `+/glances+` - and the subdomain should be protected by authentication.
+
+Prerequisite: https://podman.io/[Podman]
+
+To run: run `+just+` in the `+admin+` directory.
+
+== nginx
+
+The `+Justfile+` in this directory runs the https://nginx.org/[Nginx] server to reverse proxy all the preceding, in a container.
+
+Prerequisites:
+
+* `+/etc/letsencrypt/arjunsatarkar.net/+` should exist and have an SSL certificate for `+*.arjunsatarkar.net+` and `+arjunsatarkar.net+`
+* `+/etc/nginx/basic_auth/.htpasswd+` should exist and contain a username-password pair, which will be required to access https://admin.arjunsatarkar.net
+* https://podman.io/[Podman]
+
+Since this container listens on ports 80 and 443 and needs to be able to read the https://letsencrypt.org/[Let's Encrypt] certificate, it is run as root and also uses the host network directly.
+
+To run: run `+just+` in the `+nginx+` directory. You may need to provide a `+sudo+` password.
