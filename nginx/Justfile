@@ -1,0 +1,2 @@
+all:
+	sudo podman run --name arjunsatarkar.net-nginx --rm --network host -v ./nginx.conf:/etc/nginx/nginx.conf -v /etc/nginx/basic_auth:/etc/nginx/basic_auth -v /etc/letsencrypt:/etc/letsencrypt -v ./logs:/var/log/nginx -d docker.io/nginx:1
