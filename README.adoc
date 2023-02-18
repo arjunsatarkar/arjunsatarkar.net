@@ -26,7 +26,7 @@ To build: run `+just+` in the `+www/+` directory.
 
 To run: run `+www/serve.py+`. If an argument is passed, it will be interpreted as the port to listen on (default 27701).
 
-After changing something in `+www/sitesrc+`, perform the build step again to update the served site.
+After changing something in `+www/sitesrc/+`, perform the build step again to update the served site.
 
 === Containerized operation
 
@@ -34,7 +34,7 @@ To build: run `+just build-image+` in the `+www/+` directory.
 
 To run: run `+just run-container+` in the `+www/+` directory.
 
-After changing something in `+www/sitesrc+`, run `+www/trigger_rebuild.sh+` to update the served site.
+After changing something in `+www/sitesrc/+`, run `+www/trigger_rebuild.sh+` to update the served site.
 
 == scm
 
