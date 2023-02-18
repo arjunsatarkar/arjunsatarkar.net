@@ -30,9 +30,9 @@ After changing something in `+www/sitesrc+`, perform the build step again to upd
 
 === Containerized operation
 
-To build: run `+just build-image+` in the `+www+` directory.
+To build: run `+just build-image+` in the `+www/+` directory.
 
-To run: run `+just run-container+` in the `+www+` directory.
+To run: run `+just run-container+` in the `+www/+` directory.
 
 After changing something in `+www/sitesrc+`, run `+www/trigger_rebuild.sh+` to update the served site.
 
@@ -42,9 +42,9 @@ This is a containerized wrapper around https://git.zx2c4.com/cgit/[Cgit] and an 
 
 Prerequisite: https://podman.io/[Podman]
 
-To build: run `+just build-image+` in the `+scm+` directory.
+To build: run `+just build-image+` in the `+scm/+` directory.
 
-To run: run `+just run-container+` in the `+scm+` directory.
+To run: run `+just run-container+` in the `+scm/+` directory.
 
 == admin
 
@@ -52,7 +52,7 @@ The `+Justfile+` in this directory runs https://homarr.dev/[Homarr] and https://
 
 Prerequisite: https://podman.io/[Podman]
 
-To run: run `+just+` in the `+admin+` directory.
+To run: run `+just+` in the `+admin/+` directory.
 
 == nginx
 
@@ -66,4 +66,4 @@ Prerequisites:
 
 Since this container listens on ports 80 and 443 and needs to be able to read the https://letsencrypt.org/[Let's Encrypt] certificate, it is run as root and also uses the host network directly.
 
-To run: run `+just+` in the `+nginx+` directory. You may need to provide a `+sudo+` password.
+To run: run `+just+` in the `+nginx/+` directory. You may need to provide a `+sudo+` password.
