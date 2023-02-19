@@ -12,6 +12,12 @@ div#end-section {
 	font-size: smaller;
 }
 
+div#dark_light_switcher {
+	width:2em;
+	height: 2em;
+	cursor: pointer;
+}
+
 @media (orientation: landscape) {
 	body {
 		margin-left: 10%;
@@ -21,26 +27,46 @@ div#end-section {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: black;
-		color: white;
-	}
-	a:link {
-		color: lightskyblue;	
-	}
-	a:visited {
-		color: mediumpurple;
+		--body-background-color: black;
+		--body-color: white;
+		--link-color: lightskyblue;
+		--link-visited-color: mediumpurple;
 	}
 }
 
 @media (prefers-color-scheme: light) {
 	body {
-		background-color: white;
-		color: black;
+		--body-background-color: white;
+		--body-color: black;
+		--link-color:  #0000EE;
+		--link-visited-color:  #551A8B;
 	}
-	a:link {
-		color: #0000EE;
-	}
-	a:visited {
-		color: #551A8B;
-	}
+}
+
+body[data-theme="dark"] {
+	--body-background-color: black;
+	--body-color: white;
+	--link-color: lightskyblue;
+	--link-visited-color: mediumpurple;
+}
+
+body[data-theme="light"] {
+	--body-background-color: white;
+	--body-color: black;
+	--link-color:  #0000EE;
+	--link-visited-color:  #551A8B;
+
+}
+
+body {
+	background-color: var(--body-background-color);
+	color: var(--body-color);
+}
+
+a:link {
+	color: var(--link-color);
+}
+
+a:visited {
+	color: var(--link-visited-color);
 }

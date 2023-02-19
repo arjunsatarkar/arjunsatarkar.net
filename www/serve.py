@@ -28,8 +28,13 @@ def reject_noncanonical_index():
 
 
 @bottle.route("/styles/<style>")
-def serve_styles(style):
+def serve_style(style):
     return bottle.static_file(style, root=webroot / "styles")
+
+
+@bottle.route("/scripts/<script>")
+def serve_script(script):
+	return bottle.static_file(script, root=webroot / "scripts")
 
 
 @bottle.route("/media/<media>")
@@ -55,7 +60,9 @@ def serve(content):
 
 @bottle.error(404)
 def serve_404(error):
-    return bottle.static_file("404.html", root=parent)
+    resp = bottle.static_file("404.html", root=parent)
+    resp.status = 404
+    return resp
 
 
 bottle.run(host="0.0.0.0", port=PORT, server="gevent")

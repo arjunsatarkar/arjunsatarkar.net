@@ -32,86 +32,6 @@
   ],
   "apps": [
     {
-      "id": "d4b98176-bf09-45c2-a238-f0afe3ad58f3",
-      "name": "scm",
-      "url": "https://scm.arjunsatarkar.net",
-      "appearance": {
-        "iconUrl": "https://scm.arjunsatarkar.net/favicon.ico"
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "okStatus": [
-          200
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "https://scm.arjunsatarkar.net"
-      },
-      "area": {
-        "type": "category",
-        "properties": {
-          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 1,
-            "y": 0
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
-      }
-    },
-    {
-      "id": "1e0adf9b-817f-4107-9c26-373e437429ec",
-      "name": "www",
-      "url": "https://www.arjunsatarkar.net/",
-      "appearance": {
-        "iconUrl": "https://www.arjunsatarkar.net/media/favicon.svg"
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "okStatus": [
-          200
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "https://www.arjunsatarkar.net/"
-      },
-      "area": {
-        "type": "category",
-        "properties": {
-          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 0,
-            "y": 0
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
-      }
-    },
-    {
       "id": "e569b5bd-6849-44fd-bf76-648d2ceaadee",
       "name": "Glances",
       "url": "https://admin.arjunsatarkar.net/system_monitor/",
@@ -225,6 +145,86 @@
           "location": {
             "x": 1,
             "y": 1
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "d4b98176-bf09-45c2-a238-f0afe3ad58f3",
+      "name": "scm",
+      "url": "https://scm.arjunsatarkar.net",
+      "appearance": {
+        "iconUrl": "https://scm.arjunsatarkar.net/favicon.ico"
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "okStatus": [
+          200
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://scm.arjunsatarkar.net"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 1,
+            "y": 0
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "1e0adf9b-817f-4107-9c26-373e437429ec",
+      "name": "www",
+      "url": "https://www.arjunsatarkar.net/",
+      "appearance": {
+        "iconUrl": "https://www.arjunsatarkar.net/media/favicon.svg"
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "okStatus": [
+          200
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://www.arjunsatarkar.net/"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 0
           },
           "size": {
             "width": 1,
