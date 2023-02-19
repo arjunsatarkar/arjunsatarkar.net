@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
 		}
 
 		if (switcher.getAttribute("data-state") !== system_theme) {
-			toggle_switcher_state()
+			toggle_switcher_state();
 		}
 	});
 	system_theme = system_theme_query.matches ? "dark" : "light";
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", (_) => {
 	switcher.setAttribute("data-state", (localStorage.getItem("theme") !== "system") ? localStorage.getItem("theme") : system_theme);
 	switcher.innerHTML = (switcher.getAttribute("data-state") === "dark") ? moon_icon : sun_icon;
 	switcher.addEventListener("click", (event) => {
-		toggle_switcher_state()
+		toggle_switcher_state();
 		localStorage.setItem("theme", switcher.getAttribute("data-state"));
 		if (localStorage.getItem("theme") === system_theme) {
 			localStorage.setItem("theme", "system");

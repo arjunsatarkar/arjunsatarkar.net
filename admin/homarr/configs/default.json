@@ -32,21 +32,64 @@
   ],
   "apps": [
     {
-      "id": "e569b5bd-6849-44fd-bf76-648d2ceaadee",
-      "name": "Glances",
-      "url": "https://admin.arjunsatarkar.net/system_monitor/",
+      "id": "d5ecfeac-c195-49f0-9e1f-83591cc285c7",
+      "name": "Nginx Status",
+      "url": "https://admin.arjunsatarkar.net/basic_status",
       "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/glances.png"
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/nginx.png"
       },
       "network": {
         "enabledStatusChecker": false,
+        "okStatus": [
+          200
+        ],
+        "statusCodes": [
+          "401"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://admin.arjunsatarkar.net/basic_status"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 1,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "1e0adf9b-817f-4107-9c26-373e437429ec",
+      "name": "www",
+      "url": "https://www.arjunsatarkar.net/",
+      "appearance": {
+        "iconUrl": "https://www.arjunsatarkar.net/media/favicon.svg"
+      },
+      "network": {
+        "enabledStatusChecker": true,
         "okStatus": [
           200
         ]
       },
       "behaviour": {
         "isOpeningNewTab": true,
-        "externalUrl": "https://admin.arjunsatarkar.net/system_monitor/"
+        "externalUrl": "https://www.arjunsatarkar.net/"
       },
       "area": {
         "type": "category",
@@ -58,7 +101,7 @@
         "lg": {
           "location": {
             "x": 0,
-            "y": 1
+            "y": 0
           },
           "size": {
             "width": 1,
@@ -115,24 +158,21 @@
       }
     },
     {
-      "id": "d5ecfeac-c195-49f0-9e1f-83591cc285c7",
-      "name": "Nginx Status",
-      "url": "https://admin.arjunsatarkar.net/basic_status",
+      "id": "e569b5bd-6849-44fd-bf76-648d2ceaadee",
+      "name": "Glances",
+      "url": "https://admin.arjunsatarkar.net/system_monitor/",
       "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/nginx.png"
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/glances.png"
       },
       "network": {
         "enabledStatusChecker": false,
         "okStatus": [
           200
-        ],
-        "statusCodes": [
-          "401"
         ]
       },
       "behaviour": {
         "isOpeningNewTab": true,
-        "externalUrl": "https://admin.arjunsatarkar.net/basic_status"
+        "externalUrl": "https://admin.arjunsatarkar.net/system_monitor/"
       },
       "area": {
         "type": "category",
@@ -143,7 +183,47 @@
       "shape": {
         "lg": {
           "location": {
-            "x": 1,
+            "x": 0,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
+    },
+    {
+      "id": "208f3463-a509-4800-a1c1-d878d1ae87ee",
+      "name": "Email",
+      "url": "https://mail.tutanota.com",
+      "appearance": {
+        "iconUrl": "https://tutanota.com/resources/favicon/logo-favicon.svg"
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "okStatus": [
+          200
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "https://mail.tutanota.com"
+      },
+      "area": {
+        "type": "category",
+        "properties": {
+          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 0,
             "y": 1
           },
           "size": {
@@ -184,46 +264,6 @@
         "lg": {
           "location": {
             "x": 1,
-            "y": 0
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
-      }
-    },
-    {
-      "id": "1e0adf9b-817f-4107-9c26-373e437429ec",
-      "name": "www",
-      "url": "https://www.arjunsatarkar.net/",
-      "appearance": {
-        "iconUrl": "https://www.arjunsatarkar.net/media/favicon.svg"
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "okStatus": [
-          200
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "https://www.arjunsatarkar.net/"
-      },
-      "area": {
-        "type": "category",
-        "properties": {
-          "id": "cf985284-a04b-4cbc-9862-77b4e38df6a8"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 0,
             "y": 0
           },
           "size": {
