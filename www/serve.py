@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import gevent.monkey
 
 gevent.monkey.patch_all()
@@ -34,7 +35,7 @@ def serve_style(style):
 
 @bottle.route("/scripts/<script>")
 def serve_script(script):
-	return bottle.static_file(script, root=webroot / "scripts")
+    return bottle.static_file(script, root=webroot / "scripts")
 
 
 @bottle.route("/media/<media>")
