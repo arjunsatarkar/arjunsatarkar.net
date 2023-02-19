@@ -12,12 +12,6 @@ div#end-section {
 	font-size: smaller;
 }
 
-div#theme-switcher {
-	width:2em;
-	height: 2em;
-	cursor: pointer;
-}
-
 @media (orientation: landscape) {
 	body {
 		margin-left: 10%;

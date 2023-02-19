@@ -70,7 +70,7 @@ addEventListener("DOMContentLoaded", () => {
 	const body = document.querySelector("body");
 	const switcher = document.createElement("div");
 	switcher.setAttribute("id", "theme-switcher");
-	switcher.setAttribute("style", "position: fixed; right: 0; bottom: 0;");
+	switcher.setAttribute("style", "position: fixed; right: 0; bottom: 0; width:2em; height: 2em; cursor: pointer;");
 	switcher.setAttribute("title", "switch theme");
 
 	function update_theme(switcher_state, system_preference, change_source) {
