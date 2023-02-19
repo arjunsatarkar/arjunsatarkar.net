@@ -12,7 +12,7 @@ div#end-section {
 	font-size: smaller;
 }
 
-div#dark_light_switcher {
+div#theme-switcher {
 	width:2em;
 	height: 2em;
 	cursor: pointer;
@@ -25,6 +25,13 @@ div#dark_light_switcher {
 	}
 }
 
+body {
+	--body-background-color: white;
+	--body-color: black;
+	--link-color:  #0000EE;
+	--link-visited-color:  #551A8B;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		--body-background-color: black;
@@ -34,13 +41,11 @@ div#dark_light_switcher {
 	}
 }
 
-@media (prefers-color-scheme: light) {
-	body {
-		--body-background-color: white;
-		--body-color: black;
-		--link-color:  #0000EE;
-		--link-visited-color:  #551A8B;
-	}
+body[data-theme="light"] {
+	--body-background-color: white;
+	--body-color: black;
+	--link-color:  #0000EE;
+	--link-visited-color:  #551A8B;
 }
 
 body[data-theme="dark"] {
@@ -48,13 +53,6 @@ body[data-theme="dark"] {
 	--body-color: white;
 	--link-color: lightskyblue;
 	--link-visited-color: mediumpurple;
-}
-
-body[data-theme="light"] {
-	--body-background-color: white;
-	--body-color: black;
-	--link-color:  #0000EE;
-	--link-visited-color:  #551A8B;
 }
 
 body {
