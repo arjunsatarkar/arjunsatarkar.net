@@ -5,6 +5,8 @@ print(
     subprocess.check_output(
         [
             "asciidoctor",
+            "--safe-mode",
+            "secure",
             "-a",
             "webfonts!",
             "-a",
