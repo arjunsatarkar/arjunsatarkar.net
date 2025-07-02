@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("$lib/assets/ubuntu-font-family-0.83/Ubuntu-R.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("$lib/assets/ubuntu-font-family-0.83/UbuntuMono-R.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {
+    --font-sans: "Ubuntu", ui-sans-serif, sans-serif;
+    --font-monospace: "Ubuntu Mono", ui-monospace, monospace;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+}
+
+@media (orientation: landscape) {
+    body {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+a:link {
+    color: lightskyblue;
+}
+
+a:visited {
+    color: rgb(182, 227, 255);
+}
+
+footer {
+    border-top: 2px solid grey;
+    font-size: small;
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
