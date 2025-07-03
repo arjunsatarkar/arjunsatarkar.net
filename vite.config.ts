@@ -12,7 +12,7 @@ export default defineConfig({
 		{
 			name: 'file_source',
 			transform(code, id) {
-				return code.replace('__FILE_SOURCE__', `'${SOURCE_REPO}/${path.relative(__dirname, id)}'`);
+				return code.replace('__FILE_SOURCE__', `'${SOURCE_REPO}/tree/main/${path.relative(__dirname, id)}'`);
 			}
 		}],
 });
