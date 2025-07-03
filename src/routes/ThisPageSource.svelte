@@ -1,5 +1,5 @@
 <script lang="ts">
-    let {source_url}: {source_url: string} = $props();
+    let {sourceUrl}: {sourceUrl: string} = $props();
 </script>
 
-<a href={source_url}>source code</a> for this page
+<a href={sourceUrl}>source code</a> for this page

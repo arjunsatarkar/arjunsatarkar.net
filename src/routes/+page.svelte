@@ -19,7 +19,7 @@
 </nav>
 
 <footer>
-    <ThisPageSource source_url={__FILE_SOURCE__}></ThisPageSource>
+    <ThisPageSource sourceUrl={__FILE_SOURCE__}></ThisPageSource>
     <details>
         <summary>more</summary>
         stars texture:
