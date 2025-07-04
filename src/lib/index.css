@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url("$lib/assets/ubuntu-font-family-0.83/Ubuntu-R.ttf") format("truetype");
+    src: url("$lib/assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
     font-display: swap;
     font-style: normal;
     font-weight: 400;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("$lib/assets/ubuntu-font-family-0.83/Ubuntu-M.ttf") format("truetype");
+    src: url("$lib/assets/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
     font-display: swap;
     font-style: normal;
     font-weight: 500;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: "Ubuntu Mono";
-    src: url("$lib/assets/ubuntu-font-family-0.83/UbuntuMono-R.ttf") format("truetype");
+    src: url("$lib/assets/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
     font-display: swap;
     font-style: normal;
     font-weight: 400;
