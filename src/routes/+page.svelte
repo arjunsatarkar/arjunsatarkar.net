@@ -27,15 +27,14 @@
 </nav>
 
 <footer>
-    <ThisPageSource sourceUrl={__FILE_SOURCE__}></ThisPageSource>
-    <details>
-        <summary>more</summary>
+    <div><ThisPageSource sourceUrl={__FILE_SOURCE__}></ThisPageSource></div>
+    <div>
         stars texture:
         <a href="https://commons.wikimedia.org/wiki/File:Starsinthesky.jpg"
             >ESA/Hubble</a
         >, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>,
         via Wikimedia Commons
-    </details>
+    </div>
 </footer>
 
 <style>
