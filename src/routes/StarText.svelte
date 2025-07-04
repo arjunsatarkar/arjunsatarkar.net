@@ -1,7 +1,7 @@
 <script lang="ts">
     const { text }: { text: string } = $props();
     // @ts-ignore
-    import image from "$lib/assets/Starsinthesky/Starsinthesky.jpg?w=3877&h=1241&&fit=cover&format=webp&quality=70&effort=max";
+    import image from "$lib/assets/Starsinthesky/Starsinthesky.jpg?w=3877&h=1241&&fit=cover&format=webp&quality=30&effort=max";
 </script>
 
 <span style:background-image={`url("${image}")`} style:background-clip="text">
