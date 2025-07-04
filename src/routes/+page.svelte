@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { favicon } from "$lib";
+    import { rasterIcon } from "$lib";
     import PipeSeparator from "./PipeSeparator.svelte";
     import StarText from "./StarText.svelte";
     import ThisPageSource from "./ThisPageSource.svelte";
@@ -15,7 +15,7 @@
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={__SITE_HOME__} />
-    <meta property="og:image" content={favicon} />
+    <meta property="og:image" content={rasterIcon} />
     <meta property="og:description" content={description} />
 </svelte:head>
 
