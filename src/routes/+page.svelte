@@ -38,6 +38,10 @@
 </footer>
 
 <style>
+    h1 {
+        font-weight: 500;
+    }
+
     nav.mylinks {
         font-family: var(--font-monospace);
     }

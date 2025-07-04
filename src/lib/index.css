@@ -7,6 +7,15 @@
 }
 
 @font-face {
+    font-family: "Ubuntu";
+    src: url("$lib/assets/ubuntu-font-family-0.83/Ubuntu-M.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+@font-face {
     font-family: "Ubuntu Mono";
     src: url("$lib/assets/ubuntu-font-family-0.83/UbuntuMono-R.ttf") format("truetype");
     font-display: swap;
