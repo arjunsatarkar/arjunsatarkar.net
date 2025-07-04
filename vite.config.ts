@@ -15,4 +15,7 @@ export default defineConfig({
 				return code.replace('__FILE_SOURCE__', `'${SOURCE_REPO}/tree/main/${path.relative(__dirname, id)}'`);
 			}
 		}],
+	define: {
+		__SITE_HOME__: JSON.stringify("https://arjunsatarkar.net/")
+	}
 });
