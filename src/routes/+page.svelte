@@ -11,6 +11,7 @@
 
 <svelte:head>
     <title>{title}</title>
+    <link rel="canonical" href={__CANONICAL_URL__} />
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />

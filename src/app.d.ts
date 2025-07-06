@@ -8,6 +8,7 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	declare const __CANONICAL_URL__: string;
 	declare const __FILE_SOURCE__: string;
 	declare const __SITE_HOME__: string;
 }
