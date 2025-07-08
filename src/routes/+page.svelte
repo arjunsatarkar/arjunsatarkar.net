@@ -11,13 +11,13 @@
 
 <svelte:head>
     <title>{title}</title>
-    <link rel="canonical" href={__CANONICAL_URL__} />
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={__SITE_HOME__} />
     <meta property="og:image" content={rasterIcon} />
     <meta property="og:description" content={description} />
+    <link rel="canonical" href={__CANONICAL_URL__} />
 </svelte:head>
 
 <h1><StarText text="Arjun Satarkar"></StarText></h1>
