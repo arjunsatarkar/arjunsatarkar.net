@@ -1,1 +1,1 @@
-<span style="user-select: none;">&nbsp;|</span>
+<span style="user-select: none;">&nbsp;|</span>{" "}
