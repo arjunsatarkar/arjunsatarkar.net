@@ -17,7 +17,6 @@
     <meta property="og:url" content={__SITE_HOME__} />
     <meta property="og:image" content={rasterIcon} />
     <meta property="og:description" content={description} />
-    <link rel="canonical" href={__CANONICAL_URL__} />
 </svelte:head>
 
 <h1><StarText text="Arjun Satarkar"></StarText></h1>
