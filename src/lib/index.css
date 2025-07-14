@@ -38,7 +38,7 @@ body {
     background-color: black;
     color: white;
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 @media (orientation: landscape) {
@@ -56,9 +56,19 @@ a:visited {
     color: rgb(182, 227, 255);
 }
 
+header {
+    border-bottom: 2px solid grey;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
 footer {
     border-top: 2px solid grey;
     font-size: small;
     margin-top: 3rem;
     padding-top: 1rem;
+}
+
+.deemphasized {
+    font-size: 1rem;
 }

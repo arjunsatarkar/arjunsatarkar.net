@@ -19,12 +19,43 @@
     <meta property="og:description" content={description} />
 </svelte:head>
 
-<h1><StarText text="Arjun Satarkar"></StarText></h1>
+<header>
+    <h1><StarText text="Arjun Satarkar"></StarText></h1>
 
-<nav class="mylinks">
-    <a href="mailto:{email}">{email}</a><PipeSeparator></PipeSeparator>
-    <a href="https://github.com/arjunsatarkar/">github.com/arjunsatarkar</a>
-</nav>
+    <nav class="mylinks">
+        <a href="mailto:{email}">{email}</a><PipeSeparator></PipeSeparator>
+        <a href="https://github.com/arjunsatarkar/">github.com/arjunsatarkar</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Projects</h2>
+    <div class="projects">
+        <div>
+            <h3>
+                <a href="https://practicekana.arjunsatarkar.net/"
+                    >Practice Japanese Kana</a
+                >
+            </h3>
+            <p>by reading words, then see their meanings.</p>
+        </div>
+        <div>
+            <h3>
+                <a href="https://hitomezashi.arjunsatarkar.net/"
+                    >Produce Hitomezashi Stitch Patterns</a
+                >
+            </h3>
+            <p>
+                <span class="deemphasized"
+                    >(<a
+                        href="https://www.clivemaxfield.com/coolbeans/another-slice-of-the-pi-with-hitomezashi-stitch-patterns/"
+                        >learn more</a
+                    >)</span
+                > which you can download as SVG and share links to.
+            </p>
+        </div>
+    </div>
+</main>
 
 <footer>
     <div><ThisPageSource sourceUrl={__FILE_SOURCE__}></ThisPageSource></div>
@@ -38,8 +69,26 @@
 </footer>
 
 <style>
-    h1 {
+    header {
+        font-size: 1.5rem;
+    }
+
+    h1,
+    h2 {
         font-weight: 500;
+    }
+
+    div.projects {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    div.projects > div {
+        flex: 1 0 33.33%;
+    }
+
+    div.projects p {
+        text-wrap: balance;
     }
 
     nav.mylinks {
