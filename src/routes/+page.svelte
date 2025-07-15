@@ -42,7 +42,7 @@
         <div>
             <h3>
                 <a href="https://hitomezashi.arjunsatarkar.net/"
-                    >Produce Hitomezashi Patterns</a
+                    >Create Hitomezashi Patterns</a
                 >
             </h3>
             <p>
