@@ -1,9 +1,13 @@
 <script lang="ts">
     const { text }: { text: string } = $props();
-    import { starTexture } from "$lib";
+    // @ts-ignore
+    import starTexture from "$lib/assets/Starsinthesky/Starsinthesky.jpg?w=1000&h=500&format=webp&quality=50&effort=max";
 </script>
 
-<span style:background-image={`url("${starTexture}")`} style:background-clip="text">
+<span
+    style:background-image={`url("${starTexture}")`}
+    style:background-clip="text"
+>
     {text}
 </span>
 

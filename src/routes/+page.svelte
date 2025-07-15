@@ -1,6 +1,5 @@
 <script lang="ts">
     import { rasterIcon } from "$lib";
-    import { starTexture } from "$lib";
     import PipeSeparator from "./PipeSeparator.svelte";
     import StarText from "./StarText.svelte";
     import ThisPageSource from "./ThisPageSource.svelte";
@@ -18,8 +17,6 @@
     <meta property="og:url" content={__SITE_HOME__} />
     <meta property="og:image" content={rasterIcon} />
     <meta property="og:description" content={description} />
-    <!-- It's our LCP element and I suppose it's good if the stars show up quickly, so... -->
-    <link rel="preload" as="image" type="image/webp" href={starTexture} />
 </svelte:head>
 
 <header>
