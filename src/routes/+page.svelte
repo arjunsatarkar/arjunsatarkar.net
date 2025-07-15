@@ -46,12 +46,13 @@
                 >
             </h3>
             <p>
+                which you can download as SVG and share links to.
                 <span class="deemphasized"
                     >(<a
                         href="https://www.clivemaxfield.com/coolbeans/another-slice-of-the-pi-with-hitomezashi-stitch-patterns/"
-                        >learn more</a
+                        >what is hitomezashi?</a
                     >)</span
-                > which you can download as SVG and share links to.
+                >
             </p>
         </div>
     </div>
