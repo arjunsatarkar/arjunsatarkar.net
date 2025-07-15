@@ -34,16 +34,16 @@
         <div>
             <h3>
                 <a href="https://practicekana.arjunsatarkar.net/"
-                    >Practice Japanese Kana</a
-                >
+                    >Practice Japanese Kana
+                </a>
             </h3>
             <p>by reading words, then see their meanings.</p>
         </div>
         <div>
             <h3>
                 <a href="https://hitomezashi.arjunsatarkar.net/"
-                    >Create Hitomezashi Patterns</a
-                >
+                    >Create Hitomezashi Patterns
+                </a>
             </h3>
             <p>
                 which you can download as SVG and share links to.
