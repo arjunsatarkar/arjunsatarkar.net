@@ -67,6 +67,7 @@
         >, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>,
         via Wikimedia Commons
     </div>
+    <a href="/oss-licenses.json">third-party licenses (json)</a>
 </footer>
 
 <style>

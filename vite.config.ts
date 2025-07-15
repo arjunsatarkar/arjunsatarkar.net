@@ -1,3 +1,4 @@
+import { createViteLicensePlugin } from 'rollup-license-plugin';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -9,6 +10,7 @@ const SOURCE_REPO = "https://github.com/arjunsatarkar/arjunsatarkar.net";
 export default defineConfig({
 	plugins: [
 		sveltekit(),
+		createViteLicensePlugin(),
 		imagetools(),
 		{
 			name: 'fileSource',
