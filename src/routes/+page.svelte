@@ -1,6 +1,7 @@
 <script lang="ts">
     import { rasterIcon } from "$lib";
     import PipeSeparator from "./PipeSeparator.svelte";
+    import ProjectsGrid from "./ProjectsGrid.svelte";
     import StarText from "./StarText.svelte";
     import ThisPageSource from "./ThisPageSource.svelte";
 
@@ -30,32 +31,7 @@
 
 <main>
     <h2>Projects</h2>
-    <div class="projects">
-        <div>
-            <h3>
-                <a href="https://practicekana.arjunsatarkar.net/"
-                    >Practice Japanese Kana
-                </a>
-            </h3>
-            <p>by reading words, then see their meanings.</p>
-        </div>
-        <div>
-            <h3>
-                <a href="https://hitomezashi.arjunsatarkar.net/"
-                    >Create Hitomezashi Patterns
-                </a>
-            </h3>
-            <p>
-                which you can download as SVG and share links to.
-                <span class="deemphasized"
-                    >(<a
-                        href="https://www.clivemaxfield.com/coolbeans/another-slice-of-the-pi-with-hitomezashi-stitch-patterns/"
-                        >what is hitomezashi?</a
-                    >)</span
-                >
-            </p>
-        </div>
-    </div>
+    <ProjectsGrid></ProjectsGrid>
 </main>
 
 <footer>
@@ -73,25 +49,6 @@
 <style>
     header {
         font-size: 1.5rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-weight: 500;
-    }
-
-    div.projects {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
-    div.projects > div {
-        flex: 1 0 33.33%;
-    }
-
-    div.projects p {
-        text-wrap: balance;
     }
 
     nav.mylinks {

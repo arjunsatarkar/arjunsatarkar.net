@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" shape-rendering="crispEdges" class="svelte-evyltu"><rect width="100%" height="100%" fill="white"></rect><!--[--><line x1="0.5" y1="0" x2="0.5" y2="30" stroke-dasharray="6 4"></line><line x1="5.5" y1="5" x2="5.5" y2="30" stroke-dasharray="6 4"></line><line x1="10.5" y1="0" x2="10.5" y2="30" stroke-dasharray="6 4"></line><line x1="15.5" y1="0" x2="15.5" y2="30" stroke-dasharray="6 4"></line><line x1="20.5" y1="5" x2="20.5" y2="30" stroke-dasharray="6 4"></line><line x1="25.5" y1="5" x2="25.5" y2="30" stroke-dasharray="6 4"></line><!--]--><!--[--><line x1="5" y1="0.5" x2="30" y2="0.5" stroke-dasharray="6 4"></line><line x1="0" y1="5.5" x2="30" y2="5.5" stroke-dasharray="6 4"></line><line x1="0" y1="10.5" x2="30" y2="10.5" stroke-dasharray="6 4"></line><line x1="5" y1="15.5" x2="30" y2="15.5" stroke-dasharray="6 4"></line><line x1="0" y1="20.5" x2="30" y2="20.5" stroke-dasharray="6 4"></line><line x1="0" y1="25.5" x2="30" y2="25.5" stroke-dasharray="6 4"></line><!--]--><style>
+        line {
+            stroke: black;
+        }
+    </style></svg>
