@@ -21,7 +21,7 @@
                 </a>
             </h3>
             <p>
-                which you can download as SVG and share links to.
+                which you can download and share links to.
                 <span class="deemphasized"
                     >(<a
                         href="https://www.clivemaxfield.com/coolbeans/another-slice-of-the-pi-with-hitomezashi-stitch-patterns/"
