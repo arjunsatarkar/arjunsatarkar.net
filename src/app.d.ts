@@ -12,4 +12,4 @@ declare global {
 	declare const __SITE_HOME__: string;
 }
 
-export { };
+export {};
