@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{> head_boilerplate }}
+    <title>Arjun Satarkar</title>
+	<style>
+		header {
+			font-size: 1.5rem;
+		}
+
+		nav.myLinks {
+			font-family: var(--font-monospace);
+		}
+
+		#projectsGrid {
+			display: grid;
+			gap: 2rem;
+			grid-template-columns: 1fr;
+			text-wrap: balance;
+		}
+
+		@media (min-width: 700px) {
+			#projectsGrid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media (min-width: 1300px) {
+			#projectsGrid {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+
+		.project {
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+		}
+
+		.thumbnail {
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+    <header>
+		<h1><span class="startext">Arjun Satarkar</span></h1>
+
+		<nav class="myLinks">
+			<a href="mailto:me@arjunsatarkar.net">me@arjunsatarkar.net</a>{{> pipe_separator }}
+			<a href="https://github.com/arjunsatarkar/">github.com/arjunsatarkar</a>
+		</nav>
+	</header>
+	<hr>
+	<main>
+		<h2>Projects</h2>
+		<div id="projectsGrid">
+			<div class="project">
+				<div>
+					<h3>
+						<a href="https://github.com/arjunsatarkar/mpv_scripts">Plugins</a> for <a href="https://mpv.io/">mpv Media Player</a>
+					</h3>
+					<p>
+						Scripts extending the already very powerful mpv with savepoints, integrated clipping, and subtitle grabbing.
+					</p>
+				</div>
+			</div>
+			<div class="project">
+				<div>
+					<h3>
+						<a href="https://practicekana.arjunsatarkar.net/">Practice Japanese Kana</a>
+					</h3>
+					<p>
+						A tool I made as a beginner to learning Japanese, for
+						practicing the syllabic scripts by reading real words.
+					</p>
+				</div>
+			</div>
+			<div class="project">
+				<div>
+					<h3>
+						<a href="https://hitomezashi.arjunsatarkar.net/">Create Hitomezashi Patterns </a>
+					</h3>
+					<p>
+						which you can download and share links to.
+						<small>
+							(<a
+								href="https://www.clivemaxfield.com/coolbeans/another-slice-of-the-pi-with-hitomezashi-stitch-patterns/"
+								>what is hitomezashi?</a
+							>)
+						</small>
+					</p>
+				</div>
+				<img src="/assets/hitomezashi_thumbnail.svg" class="thumbnail" alt="Hitomezashi pattern" />
+			</div>
+		</div>
+		<hr>
+		<p>There is some <a href="/writing">writing</a>.</p>
+	</main>
+	<hr>
+	<footer>
+		<div style="font-size: small;">
+			stars texture:
+			<a href="https://commons.wikimedia.org/wiki/File:Starsinthesky.jpg">ESA/Hubble</a>,
+			<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons
+		</div>
+	</footer>
+</body>
+</html>

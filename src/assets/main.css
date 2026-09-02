@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+	src: url('/assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
 	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+	src: url('/assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 	font-display: swap;
 	font-style: normal;
 	font-weight: bold;
@@ -16,7 +16,7 @@
 
 @font-face {
 	font-family: 'Ubuntu Mono';
-	src: url('$lib/assets/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
+	src: url('/assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
 	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
@@ -51,18 +51,28 @@ a:visited {
 }
 
 header {
-	border-bottom: 2px solid grey;
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
 }
 
 footer {
-	border-top: 2px solid grey;
-	font-size: small;
-	margin-top: 3rem;
+	margin-top: 1rem;
 	padding-top: 1rem;
 }
 
-.deemphasized {
-	font-size: 1rem;
+.startext {
+    color: white;
+    display: block;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    .startext {
+        background-image: url("/assets/Starsinthesky/Starsinthesky.jpg");
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-color: white;
+        background-position: center;
+        background-size: 20%;
+        color: transparent;
+    }
 }
