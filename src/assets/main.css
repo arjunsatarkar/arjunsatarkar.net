@@ -67,7 +67,7 @@ footer {
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
     .startext {
-        background-image: url("/assets/Starsinthesky/Starsinthesky.jpg");
+        background-image: url("/assets/Starsinthesky/Starsinthesky_bgclip.webp");
         -webkit-background-clip: text;
         background-clip: text;
         background-color: white;
@@ -75,4 +75,17 @@ footer {
         background-size: 20%;
         color: transparent;
     }
+}
+
+sup a {
+	text-decoration: none;
+}
+
+.byline {
+	margin-top: 0;
+	font-size: smaller;
+}
+
+h1 {
+	margin-bottom: 0.4rem;
 }
