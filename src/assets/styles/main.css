@@ -62,8 +62,8 @@ body {
 	color: white;
 	font-family: var(--font-sans);
 	font-size: 1.2rem;
-	margin-left: 5%;
-	margin-right: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 a:link {
@@ -99,17 +99,4 @@ footer {
         background-size: 20%;
         color: transparent;
     }
-}
-
-sup a {
-	text-decoration: none;
-}
-
-.byline {
-	margin-top: 0;
-	font-size: smaller;
-}
-
-h1 {
-	margin-bottom: 0.4rem;
 }
