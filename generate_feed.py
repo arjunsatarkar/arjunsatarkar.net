@@ -1,33 +1,34 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.13"
-# dependencies = []
+# dependencies = [
+#     "beautifulsoup4>=4.15.0",
+# ]
 # ///
 import datetime
 import tomllib
 import xml.etree.ElementTree as ET
 
+from bs4 import BeautifulSoup
 
 class Entry:
     def __init__(
         self,
         title: str,
         slug: str,
-        published: datetime.datetime | None,
+        published: datetime.datetime,
         updated: datetime.datetime | None,
     ):
-        if not (published is not None or updated is not None):
-            raise ValueError("Either published or updated must be provided")
         if published is None:
-            published = updated
+            raise ValueError("published datetime must be provided")
         if updated is None:
             updated = published
         self.title = title
         self.slug = slug
         self.published = published
         self.updated = updated
-        # I just want to get a valid feed out now, it'd be better to include the actual content but that's for later
-        self.content = title
+        with open(f"build/writing/{slug}/index.html") as f:
+            self.content = f.read()
 
 
 def get_entries():
@@ -39,7 +40,7 @@ def get_entries():
             new_entry = Entry(
                 entry["title"],
                 entry["slug"],
-                entry.get("published", None),
+                entry["published"],
                 entry.get("updated", None),
             )
             entries.append(new_entry)
@@ -48,8 +49,7 @@ def get_entries():
                 or new_entry.updated > latest_update_datetime
             ):
                 latest_update_datetime = new_entry.updated
-    entries.reverse()
-    return entries, latest_update_datetime
+    return sorted(entries, key=lambda entry: entry.published), latest_update_datetime
 
 
 def get_url_from_slug(slug: str):
@@ -91,8 +91,7 @@ def generate_feed(entries: list[Entry], latest_updated_datetime: datetime.dateti
         feed_entry = ET.SubElement(feed, "entry")
 
         feed_entry_title = ET.SubElement(feed_entry, "title")
-        feed_entry_title.attrib["type"] = "html"
-        feed_entry_title.text = entry.title
+        feed_entry_title.text = BeautifulSoup(entry.title, "html.parser").get_text()
 
         feed_entry_link_alternate = ET.SubElement(feed_entry, "link")
         feed_entry_link_alternate.attrib["rel"] = "alternate"
@@ -114,22 +113,10 @@ def generate_feed(entries: list[Entry], latest_updated_datetime: datetime.dateti
     return ET.tostring(feed, encoding="unicode", xml_declaration=True)
 
 
-def generate_index(entries: list[Entry]):
-    result = "<ul>"
-    for entry in entries:
-        result += f'<li><a href="{get_url_from_slug(entry.slug)}">{entry.title}</a> ({entry.published.date().isoformat()})</li>'
-    result += "</ul>"
-    return result
-
-
 def main():
     entries, latest_updated_datetime = get_entries()
-
-    with open("tmp_output/writing.atom", "w") as f:
+    with open("build/writing.atom", "w") as f:
         f.write(generate_feed(entries, latest_updated_datetime))
-
-    with open("tmp_output/writing_index.hbs", "w") as f:
-        f.write(generate_index(entries))
 
 
 if __name__ == "__main__":

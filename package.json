@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./build.sh"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
   "type": "module",
   "devDependencies": {
     "handlebars": "^4.7.9",
-    "prettier": "3.9.6"
+    "prettier": "3.9.6",
+    "smol-toml": "^1.8.0"
   }
 }
