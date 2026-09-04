@@ -28,7 +28,7 @@ class Entry:
         self.published = published
         self.updated = updated
         with open(f"build/writing/{slug}/index.html") as f:
-            self.content = BeautifulSoup(f.read(), "html.parser").body.encode_contents(encoding="utf-8").decode("utf-8")
+            self.content = BeautifulSoup(f.read(), "html.parser").body.decode_contents(eventual_encoding="utf-8")
 
 
 def get_entries():
