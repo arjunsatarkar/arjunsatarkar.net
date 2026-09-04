@@ -1,17 +1,17 @@
 sup a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .byline {
-	margin-top: 0;
-	font-size: smaller;
+  margin-top: 0;
+  font-size: smaller;
 }
 
 h1 {
-	margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 body {
-    max-width: 75ch;
-    margin-inline: auto;
+  max-width: 75ch;
+  margin-inline: auto;
 }

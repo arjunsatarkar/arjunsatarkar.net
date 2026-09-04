@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,6 +19,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "handlebars": "^4.7.9"
+    "handlebars": "^4.7.9",
+    "prettier": "3.9.6"
   }
 }

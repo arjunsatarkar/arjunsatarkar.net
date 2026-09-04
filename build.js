@@ -13,6 +13,14 @@ console.info("Cleared build/");
 await fs.cp(ASSETS_PATH, "build/assets", { recursive: true });
 console.info(`Copied assets from ${ASSETS_PATH}`);
 
+// Also the Atom feed
+{
+  const source = "tmp_output/writing.atom";
+  const destination = "build/writing.atom";
+  await fs.cp(source, destination);
+  console.info(`Copied Atom feed from ${source} to ${destination}`);
+}
+
 // Register partials (no nesting)
 const partialsDirEntries = await fs.readdir(PARTIALS_PATH, {
   withFileTypes: true,
@@ -29,6 +37,14 @@ for (const partialsDirEntry of partialsDirEntries) {
   );
 
   console.info(`Registered partial ${partialName} from ${joinedPath}`);
+}
+
+// Register the extra writing_index partial
+{
+  const name = "writing_index";
+  const filePath = "tmp_output/writing_index.hbs";
+  Handlebars.registerPartial(name, await fs.readFile(filePath, "utf-8"));
+  console.info(`Registed partial ${name} from ${filePath}`);
 }
 
 // Compile and output the result of evaluating regular templates

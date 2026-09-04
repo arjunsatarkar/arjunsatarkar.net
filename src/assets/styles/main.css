@@ -1,102 +1,103 @@
 @font-face {
-	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype');
-	font-display: swap;
-	font-style: italic;
-	font-weight: 400;
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Italic.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
-	font-display: swap;
-	font-style: normal;
-	font-weight: bold;
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
-	font-family: 'Ubuntu';
-	src: url('/assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf') format('truetype');
-	font-display: swap;
-	font-style: italic;
-	font-weight: bold;
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @font-face {
-	font-family: 'Ubuntu Mono';
-	src: url('/assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
+  font-family: "Ubuntu Mono";
+  src: url("/assets/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: 'Ubuntu Mono';
-	src: url('/assets/fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('truetype');
-	font-display: swap;
-	font-style: italic;
-	font-weight: 400;
+  font-family: "Ubuntu Mono";
+  src: url("/assets/fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
 }
 
 :root {
-	--font-sans: 'Ubuntu', ui-sans-serif, sans-serif;
-	--font-monospace: 'Ubuntu Mono', ui-monospace, monospace;
+  --font-sans: "Ubuntu", ui-sans-serif, sans-serif;
+  --font-monospace: "Ubuntu Mono", ui-monospace, monospace;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: black;
-	color: white;
-	font-family: var(--font-sans);
-	font-size: 1.2rem;
-	padding-left: 5%;
-	padding-right: 5%;
+  background-color: black;
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 a:link {
-	color: lightskyblue;
+  color: lightskyblue;
 }
 
 a:visited {
-	color: rgb(182, 227, 255);
+  color: rgb(182, 227, 255);
 }
 
 header {
-	padding-bottom: 1rem;
-	margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 footer {
-	margin-top: 1rem;
-	padding-top: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .startext {
-    color: white;
-    display: block;
+  color: white;
+  display: block;
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-    .startext {
-        background-image: url("/assets/Starsinthesky/Starsinthesky_bgclip.webp");
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-color: white;
-        background-position: center;
-        background-size: 20%;
-        color: transparent;
-    }
+  .startext {
+    background-image: url("/assets/Starsinthesky/Starsinthesky_bgclip.webp");
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: white;
+    background-position: center;
+    background-size: 20%;
+    color: transparent;
+  }
 }
