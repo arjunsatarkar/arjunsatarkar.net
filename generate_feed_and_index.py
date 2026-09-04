@@ -48,6 +48,7 @@ def get_entries():
                 or new_entry.updated > latest_update_datetime
             ):
                 latest_update_datetime = new_entry.updated
+    entries.reverse()
     return entries, latest_update_datetime
 
 
