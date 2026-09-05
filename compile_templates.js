@@ -14,6 +14,8 @@ console.info("Cleared build/");
 await fs.cp(ASSETS_PATH, "build/assets", { recursive: true });
 console.info(`Copied assets from ${ASSETS_PATH}`);
 
+Handlebars.registerHelper("default", (value, defaultValue) => value != null ? value : defaultValue);
+
 // Register partials
 {
   const partialsDirEntries = await fs.readdir(PARTIALS_PATH, {
@@ -80,7 +82,11 @@ for (const entry of entries) {
   );
   await fs.mkdir(outDir, { recursive: true });
   const outPath = path.join(outDir, parsedPath.name + ".html");
-  await fs.writeFile(outPath, template());
+  await fs.writeFile(outPath, template({canonical_url: getCanonicalUrl(path.relative(TEMPLATES_PATH, joinedPath))}));
 
   console.info(`Wrote result of ${joinedPath} to ${outPath}`);
+}
+
+function getCanonicalUrl(relativePath) {
+  return `https://arjunsatarkar.net${path.join("/", relativePath).replace(/(.*\/)index\.hbs$/, "$1")}`;
 }
