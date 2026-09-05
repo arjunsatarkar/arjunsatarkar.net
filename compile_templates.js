@@ -14,7 +14,15 @@ console.info("Cleared build/");
 await fs.cp(ASSETS_PATH, "build/assets", { recursive: true });
 console.info(`Copied assets from ${ASSETS_PATH}`);
 
+// Register some useful helpers
 Handlebars.registerHelper("default", (value, defaultValue) => value != null ? value : defaultValue);
+
+Handlebars.registerHelper('assign', (name, value, options) => {
+    if (!options.data.root) {
+        options.data.root = {};
+    }
+    options.data.root[name] = value;
+});
 
 // Register partials
 {
