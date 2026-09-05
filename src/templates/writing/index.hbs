@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{{> head_boilerplate title="Writing | Arjun Satarkar"}}
-    <link rel="alternate" href="/writing.atom" type="application/atom+xml" title="Writing | Arjun Satarkar">
-    <style>
+    <head>
+        {{> head_boilerplate title="Writing | Arjun Satarkar"}}
+        <link rel="alternate"
+              href="/writing.atom"
+              type="application/atom+xml"
+              title="Writing | Arjun Satarkar">
+        <style>
         header {
             display: flex;
             flex-wrap: wrap;
@@ -18,17 +21,17 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/">&lt; Home</a>
-        </nav>
-        <a id="feed_anchor" href="/writing.atom">Atom feed</a>
-    </header>
-    <h1>Writing</h1>
-    {{> writing_index }}
-    <hr>
-</body>
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/">&lt; Home</a>
+            </nav>
+            <a id="feed_anchor" href="/writing.atom">Atom feed</a>
+        </header>
+        <h1>Writing</h1>
+        {{> writing_index }}
+        <hr>
+    </body>
 </html>

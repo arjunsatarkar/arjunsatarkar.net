@@ -1,4 +1,4 @@
-import * as TOML from 'smol-toml'
+import * as TOML from "smol-toml";
 import fs from "node:fs/promises";
 import Handlebars from "handlebars";
 import path from "node:path";
@@ -15,13 +15,15 @@ await fs.cp(ASSETS_PATH, "build/assets", { recursive: true });
 console.info(`Copied assets from ${ASSETS_PATH}`);
 
 // Register some useful helpers
-Handlebars.registerHelper("default", (value, defaultValue) => value != null ? value : defaultValue);
+Handlebars.registerHelper("default", (value, defaultValue) =>
+  value != null ? value : defaultValue,
+);
 
-Handlebars.registerHelper('assign', (name, value, options) => {
-    if (!options.data.root) {
-        options.data.root = {};
-    }
-    options.data.root[name] = value;
+Handlebars.registerHelper("assign", (name, value, options) => {
+  if (!options.data.root) {
+    options.data.root = {};
+  }
+  options.data.root[name] = value;
 });
 
 // Register partials
@@ -53,17 +55,17 @@ Handlebars.registerHelper('assign', (name, value, options) => {
     entry["published"] = dateString.slice(0, dateString.indexOf("T"));
   }
   const template = Handlebars.compile(
-`
+    `
 <ul>
     {{#each entries}}
       <li><a href="/writing/{{slug}}/">{{{title}}}</a> (<time datetime="{{published}}">{{published}}</time>)</li>
     {{/each}}
 </ul>
-`
+`,
   );
 
   const name = "writing_index";
-  Handlebars.registerPartial(name, template({entries: entries}));
+  Handlebars.registerPartial(name, template({ entries: entries }));
   console.info(`Registered partial ${name} (generated)`);
 }
 
@@ -90,7 +92,12 @@ for (const entry of entries) {
   );
   await fs.mkdir(outDir, { recursive: true });
   const outPath = path.join(outDir, parsedPath.name + ".html");
-  await fs.writeFile(outPath, template({canonical_url: getCanonicalUrl(path.relative(TEMPLATES_PATH, joinedPath))}));
+  await fs.writeFile(
+    outPath,
+    template({
+      canonical_url: getCanonicalUrl(path.relative(TEMPLATES_PATH, joinedPath)),
+    }),
+  );
 
   console.info(`Wrote result of ${joinedPath} to ${outPath}`);
 }
