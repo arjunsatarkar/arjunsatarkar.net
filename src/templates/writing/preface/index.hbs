@@ -1,7 +1,13 @@
 {{ assign "pub_date" "2026-09-02" }}
 <!DOCTYPE html>
 <html lang="en">
-    <head>{{> writing_head_boilerplate title="A preface" pub_date=pub_date}}</head>
+    <head>
+        {{> writing_head_boilerplate
+            title="A preface"
+            pub_date=pub_date
+            description="It has been traditional for the first post made to a blog to express the author’s intentions, hopes, and reasons for beginning one."
+        }}
+    </head>
     <body>
         {{> writing_header}}
         <article itemscope itemtype="https://schema.org/Article">
