@@ -30,14 +30,16 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav aria-label="Header">
                 <a href="/">&lt; Home</a>
             </nav>
             <a id="feed_anchor" href="/writing.atom">Atom feed</a>
         </header>
         <main>
-            <h1>Writing</h1>
-            <div id="writing_index">{{> writing_index }}</div>
+            <nav aria-label="Writing index">
+                <h1>Writing</h1>
+                <div id="writing_index">{{> writing_index }}</div>
+            </nav>
         </main>
         <hr>
     </body>
