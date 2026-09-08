@@ -101,3 +101,23 @@ footer {
     color: transparent;
   }
 }
+
+sup a {
+  text-decoration: none;
+}
+
+/* Limit width where the main content includes an article, for readability. */ 
+body:has(main article) {
+  max-width: 75ch;
+  margin-inline: auto;
+}
+
+/* Looks better with the byline. */
+article h1 {
+  margin-bottom: 0.4rem;
+}
+
+.byline {
+  margin-top: 0;
+  font-size: smaller;
+}
