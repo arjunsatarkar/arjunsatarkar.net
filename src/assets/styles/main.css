@@ -106,7 +106,7 @@ sup a {
   text-decoration: none;
 }
 
-/* Limit width where the main content includes an article, for readability. */ 
+/* Limit width where the main content includes an article, for readability. */
 body:has(main article) {
   max-width: 75ch;
   margin-inline: auto;
