@@ -106,18 +106,34 @@ sup a {
   text-decoration: none;
 }
 
-/* Limit width where the main content includes an article, for readability. */
-body:has(main article) {
+/* Limit width for readability. */
+main article {
   max-width: 75ch;
   margin-inline: auto;
 }
 
+header#writing_header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 /* Looks better with the byline. */
-article h1 {
+main article h1 {
   margin-bottom: 0.4rem;
 }
 
 .byline {
   margin-top: 0;
   font-size: smaller;
+}
+
+.feed_anchor::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url("/assets/feed-icon/feed-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }

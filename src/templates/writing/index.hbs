@@ -7,33 +7,17 @@
               type="application/atom+xml"
               title="Writing | Arjun Satarkar">
         <style>
-            header {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-
-            #feed_anchor::before {
-                content: "";
-                display: inline-block;
-                width: 1.2rem;
-                height: 1.2rem;
-                background-image: url("/assets/feed-icon/feed-icon.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-
             #writing_index li {
                 margin-bottom: 1rem;
             }
         </style>
     </head>
     <body>
-        <header>
+        <header id="writing_header">
             <nav aria-label="Header">
                 <a href="/">&lt; Home</a>
+                {{> feed_anchor }}
             </nav>
-            <a id="feed_anchor" href="/writing.atom">Atom feed</a>
         </header>
         <main>
             <nav aria-label="Writing index">
