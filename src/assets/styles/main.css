@@ -113,9 +113,9 @@ main article {
 }
 
 header#writing_header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Looks better with the byline. */
@@ -128,12 +128,16 @@ main article h1 {
   font-size: smaller;
 }
 
+li {
+  margin-bottom: 1rem;
+}
+
 .feed_anchor::before {
-    content: "";
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-image: url("/assets/feed-icon/feed-icon.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url("/assets/feed-icon/feed-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
