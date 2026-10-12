@@ -53,7 +53,7 @@ def get_entries():
                 or new_entry.updated > latest_update_datetime
             ):
                 latest_update_datetime = new_entry.updated
-    return sorted(entries, key=lambda entry: entry.published), latest_update_datetime
+    return sorted(entries, key=lambda entry: entry.published, reverse=True), latest_update_datetime
 
 
 def get_url_from_slug(slug: str):
