@@ -50,6 +50,8 @@
 :root {
   --font-sans: "Ubuntu", ui-sans-serif, sans-serif;
   --font-monospace: "Ubuntu Mono", ui-monospace, monospace;
+  --color-fg: white;
+  --color-bg: black;
 }
 
 html,
@@ -59,8 +61,8 @@ body {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   font-family: var(--font-sans);
   font-size: 1.2rem;
   padding-left: 5%;
@@ -75,6 +77,19 @@ a:visited {
   color: rgb(182, 227, 255);
 }
 
+code {
+  font-family: var(--font-monospace);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid var(--color-fg);
+  padding-inline: 0.3rem;
+}
+
 header {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
@@ -86,7 +101,7 @@ footer {
 }
 
 .startext {
-  color: white;
+  color: var(--color-fg);
   display: block;
 }
 
@@ -95,7 +110,7 @@ footer {
     background-image: url("/assets/Starsinthesky/Starsinthesky_bgclip.webp");
     -webkit-background-clip: text;
     background-clip: text;
-    background-color: white;
+    background-color: var(--color-fg);
     background-position: center;
     background-size: 20%;
     color: transparent;

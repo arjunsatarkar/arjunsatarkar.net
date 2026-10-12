@@ -1,0 +1,142 @@
+{{ assign "pub_date" "2026-10-12" }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> writing_head_boilerplate
+            title="Notes on Japanese input on Linux with mozc"
+            pub_date=pub_date
+            description="The missing cheatsheet for Google's OSS Japanese IME."
+        }}
+    </head>
+    <body>
+        {{> writing_header}}
+        <main>
+            <article itemscope itemtype="https://schema.org/Article">
+                <h1 itemprop="headline">Notes on Japanese input on Linux with mozc</h1>
+                {{> writing_byline_dateline author="Arjun Satarkar" pub_date=pub_date}}
+                <div itemprop="articleBody">
+                    <p>
+                        If you decide you want to type in Japanese on your Linux system and look up how to accomplish that, you might find out that you need an "input method editor" to turn typed Latin characters into kana and kanji. And if you do a little research on, say, <a href="https://wiki.archlinux.org/title/Localization/Japanese#Input_Method_Editor_(IME)">the Arch wiki</a>, you might notice that the only maintained and full-featured option that seems to exist is mozc. It's <a href="https://github.com/google/mozc">open source</a>, but it's basically a somewhat stripped down version of Google's proprietary Japanese input method.
+                    </p>
+                    <p>
+                        Another fact about it is that the official documentation contains basically no information about how to actually type with it. Really; <a href="https://github.com/google/mozc/tree/f72aa6c5fccdbdcfba7e5337f5c565def73abbc6/docs">here it is</a> as of the latest commit at time of writing. See how much you can find out about how to use the thing! (Not much.)
+                    </p>
+                    <p>
+                        Of course, it's probably obvious that typed rōmaji turns into kana on screen, and then with a bit of trial and error you figure out that space, enter, and the arrow keys all do things. But <a href="https://en.wikipedia.org/wiki/W%C4%81puro_r%C5%8Dmaji">word processor rōmaji</a> contains various divergences from ordinary romanisation schemes, some of the punctuation you'll need is less than obvious, and there are surprising depths to the whole thing when you go beyond the most basic use cases. So, this is a cheatsheet I would have liked to have a year ago.
+                    </p>
+                    <p>
+                        (By the way, I'm not going to say anything about the installation process except that you should make sure to get the <a href="https://wiki.archlinux.org/index.php?title=Mozc&oldid=885594#The_UT_Dictionary">UT dictionary</a>. Consult your distro's documentation!)
+                    </p>
+                    <h2 id="table-of-contents">Table of contents</h2>
+                    <ol>
+                        <li><a href="#selecting-conversions">Selecting conversions (space, enter, the arrow keys)</a></li>
+                        <li><a href="#function-keys">The function keys F6&ndash;F10</a></li>
+                        <li><a href="#essential-word-processor-rōmaji">Essential word processor rōmaji sequences</a></li>
+                        <li><a href="#punctuation">Punctuation! Spaces!</a></li>
+                        <li><a href="#archaic-kana">Archaic kana</a></li>
+                        <li><a href="#special-features">Special features</a></li>
+                        <li><a href="#the-end">The end</a></li>
+                    </ol>
+                    <h2 id="selecting-conversions">Selecting conversions (space, enter, the arrow keys)</h2>
+                    <p>
+                        After switching to the mozc input method (typically Ctrl+Space but check your distro docs) you can start typing into any text field. Romaji should convert to hiragana, but it will have an underline underneath it to indicate that it's not been finalised; there will also be a box showing various suggested completions. Try typing out a word. If the word in hiragana is what you want, <b>Enter</b> will remove the underline and suggestions box so you can start a new word.
+                    </p>
+                    <p>
+                        On the other hand, say you wrote <span lang="ja">おもい</span>, but what you want is its kanji form <span lang="ja">思い</span>. Press <b>Space</b> to cycle through forms of a word (kanji, katakana, &amp;c.). The most common will usually be first; further presses convert to other homophonous matches like <span lang="ja">重い</span>. When you have the right form, Enter will lock it in.
+                    </p>
+                    <p>
+                        If you type in <span lang="ja">こんに</span>, you should see <span lang="ja">こんにちは</span> in the suggested completions box. Press the <b>Down</b> arrow to cycle through these suggestions (and the Up arrow to go back), using Enter to accept the selected one as usual.
+                    </p>
+                    <p>
+                        Rather than going word by word, you could type in a whole phrase or sentence, then press space to convert the whole thing at once. The <b>Left</b> and <b>Right</b> arrow keys let you move to different parts of the sentence to adjust the conversions using the same methods as above, but sometimes the boundaries selected by the software are inconvenient, so ambiguous or complex sentences can be a pain to write this way.
+                    </p>
+                    <h2 id="function-keys">The function keys F6&ndash;F10</h2>
+                    <p>
+                        Sometimes you want to convert the entirety of what you typed to a particular script, such as katakana or Latin characters. The function keys let you do this without messing with the suggested conversions. They are as follows:
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>Function</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>F6</td>
+                                <td>Hiragana (already the default)</td>
+                                <td><span lang="ja">ひらがな</span></td>
+                            </tr>
+                            <tr>
+                                <td>F7</td>
+                                <td>Katakana</td>
+                                <td><span lang="ja">カタカナ</span></td>
+                            </tr>
+                            <tr>
+                                <td>F8</td>
+                                <td><a href="https://en.wikipedia.org/wiki/Half-width_kana">Half-width katakana</a></td>
+                                <td><span lang="ja">ｶﾀｶﾅ</span></td>
+                            </tr>
+                            <tr>
+                                <td>F9</td>
+                                <td>Full-width rōmaji</td>
+                                <td><span lang="ja">ｒｏ−ｍａｊｉ</span></td>
+                            </tr>
+                            <tr>
+                                <td>F10</td>
+                                <td>Half-width rōmaji (i.e. normal Latin letters)</td>
+                                <td>ro-maji</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Here are some questions you may have. "Why would I want to use half-width katakana?" To annoy people online sometimes. "What are full-width rōmaji for?" They have some purposes in <a href="https://en.wikipedia.org/wiki/Horizontal_and_vertical_writing_in_East_Asian_scripts">vertical writing</a>, among other things.
+                    </p>
+                    <h2 id="essential-word-processor-rōmaji">Essential word processor rōmaji sequences</h2>
+                    <p>
+                        There are differences between word processor input such as this and any romanisation scheme intended for presentation, like <a href="https://en.wikipedia.org/wiki/Hepburn_romanization">Hepburn</a>, which is what most learners encounter first. Here are some relevant facts in approximate order of importance:
+                    </p>
+                    <ul>
+                        <li>To type <span lang="ja">ん</span>, you often need to press <code>n</code> twice, since otherwise a sequence like <span lang="ja">んい</span> is indistinguishable from <span lang="ja">に</span>. (Technically, <code>n'</code> also works, but this is harder to type. Also, sometimes you don't have to do this at all if it's unambiguous, like <span lang="ja">んか</span>, but maybe do it consistently to avoid issues.)</li>
+                        <li>You must remember to enter <span lang="ja">は・を・へ</span> as <code>ha</code>, <code>wo</code>, and <code>he</code> respectively, even if they are being used as particles and thus aren't pronounced that way.</li>
+                        <li>You can type small kana (<span lang="ja">ぁぃぅぇぉゃゅょっ</span>) by typing <code>l</code> or <code>x</code> before the regular sequence for the kana, eg. <code>xya</code> for <span lang="ja">ゃ</span>. But you should usually use the standard sequences, like <code>sha</code> or <code>sya</code> for <span lang="ja">しゃ</span>.</li>
+                        <li>You can use shorter romanisations than Hepburn for several kana, akin to the more regular <a href="https://en.wikipedia.org/wiki/Nihon-shiki">Nihon-shiki</a> system. As such, <code>si</code> can be used rather than <code>shi</code> for <span lang="ja">し</span>, <code>tu</code> for <span lang="ja">つ</span>, and <code>ti</code> for <span lang="ja">ち</span>.</li>
+                        <li><span lang="ja">ティ</span> is <code>thi</code>, and <span lang="ja">ウォ</span> is <code>who</code>. "v" combinations using <span lang="ja">ゔ</span> are also supported; try <code>va</code>, <code>vu</code>, &amp;c. The less common <span lang="ja">トゥ</span> is <code>twu</code>.</li>
+                        <li>The yen symbol ￥ is <code>\</code>, but you can cycle through the other conversions to get a real backslash.</li>
+                    </ul>
+                    <h2 id="punctuation">Punctuation! Spaces!</h2>
+                    <p>
+                        Firstly: all the punctuation you already type in English can still be typed using the same keys. The Japanese full stop "<span lang="ja">。</span>" is a bit different from the English one, and the question and exclamation marks are also wider; this is expected in most Japanese text, but if you need the usual ASCII ones you can cycle through the completions or use the <a href="#function-keys">function keys</a>. Here is all the other information:
+                    </p>
+                    <ul>
+                        <li>The default Japanese space, which you can get by pressing Space when there's no other input waiting, is wide; if you need the normal ASCII space you must use Shift+Space.</li>
+                        <li>The long vowel mark <span lang="ja">ー</span> is typed as <code>-</code>, the hyphen. The Japanese wave dash <span lang="ja">〜</span> that looks like a wide tilde is in fact typed as one, <code>~</code>.</li>
+                        <li>You can get various special brackets using the conversions for <code>()</code>.</li>
+                        <li>The interpunct or middle dot <span lang="ja">・</span> is <code>/</code>, but you can get an actual forward slash by cycling through the conversions.</li>
+                        <li>The Japanese quotation marks <span lang="ja">「」</span> are <code>[</code> and <code>]</code> respectively.</li>
+                        <li>The Japanese double quotes (used for titles of works) <span lang="ja">『』</span> are <code>z[</code> and <code>z]</code> respectively.</li>
+                    </ul>
+                    <h2 id="archaic-kana">Archaic kana</h2>
+                    <p>
+                        If you need to type the archaic kana <span lang="ja">ゐ</span> or <span lang="ja">ゑ</span> or their katakana versions, they are <code>wyi</code> and <code>wye</code> respectively. If you forget that, you can cycle through the conversions for <code>wi</code> or <code>we</code>. These do actually come up occasionally, in proper nouns and usernames, even if you're not writing in the <a href="https://en.wikipedia.org/wiki/Historical_kana_orthography">historical kana orthography</a>.
+                    </p>
+                    <h2 id="special-features">Special features</h2>
+                    <p>
+                        The IME can do some neat things because of its role intercepting user input, some of which are not even directly connected to typing Japanese. Here are the ones I know of so far:
+                    </p>
+                    <ul>
+                        <li>If you type <span lang="ja">きょう</span>, the conversions will include various ways of representing the current date.</li>
+                        <li>If you type a mathematical expression followed by an equals sign, the default conversion will be the resulting value, i.e. it's a textual calculator! <code>5+3=</code> converts as 8. <code>sqrt(7)=</code> converts as 2.6457513. This is kind of amazing.</li>
+                        <li><code>ba-jonn</code> (that is, <span lang="ja">バージョン</span>, the Japanese transliteration of "version") will include the Mozc version you're using somewhere in its list of completions.</li>
+                    </ul>
+                    <h2 id="the-end">The end</h2>
+                    <p>
+                        That's all I know so far. I think it covers all the essentials and some extras. Send me an email if you know something that could be here but isn't!
+                    </p>
+                </div>
+            </article>
+        </main>
+        {{> writing_footer}}
+    </body>
+</html>
