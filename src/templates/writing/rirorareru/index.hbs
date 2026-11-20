@@ -1,0 +1,32 @@
+{{ assign "pub_date" "2026-11-20" }}
+{{ assign "title" "リロられる is a fun word" }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> writing_head_boilerplate
+            title=title
+            pub_date=pub_date
+            description="Amusing-to-me observation on the passive form of a Japanese slang verb."
+        }}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        {{> writing_header}}
+        <main>
+            <article itemscope itemtype="https://schema.org/Article">
+                <h1 itemprop="headline">{{ title }}</h1>
+                {{> writing_byline_dateline author="Arjun Satarkar" pub_date=pub_date}}
+                <div itemprop="articleBody">
+                    <p>
+                        While discussing the passive form of Japanese verbs with a friend, we noticed that the suffix used to form them (for some verb classes), <span lang="ja">られる</span> (<i>rareru</i>), contains three of the five characters in the 'r' row of the Japanese syllabary (the <span lang="ja">ら<ruby>行<rt>ぎょう</rt></ruby></span>), and so the natural question became "can we somehow construct a verb form that uses the other two as well?"
+                    </p>
+                    <p>
+                        Searching <a href="https://jisho.org/">jisho.org</a> for plausible candidates yielded the slang term <span lang="ja">リロる</span> (<i>riroru</i>), meaning "to reload" (derived from an abbreviation of the English word "reload"), which seems to see some use online. Its passive form would indeed be the wonderful <span lang="ja">リロられる</span> (<i>rirorareru</i>), a word making complete use of&mdash;and solely composed of&mdash;the 'r' row of the kana chart. It's fun to say out loud too!
+                    </p>
+                    <p>That's all for this one.</p>
+                </div>
+            </article>
+        </main>
+        {{> writing_footer}}
+    </body>
+</html>
