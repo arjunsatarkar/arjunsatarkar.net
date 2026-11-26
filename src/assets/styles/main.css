@@ -3,7 +3,7 @@
   src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 @font-face {
@@ -12,7 +12,7 @@
     format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   src: url("/assets/fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf") format("truetype");
   font-display: swap;
   font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 @font-face {
@@ -41,8 +41,25 @@
   font-stretch: 75% 100%;
 }
 
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/Newsreader/Newsreader-Italic-VariableFont_opsz,wght.ttf");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 200 800;
+}
+
 :root {
-  --font-sans: "Roboto", ui-sans-serif, sans-serif;
+  --font-general: "Roboto", sans-serif;
+  --font-writing: "Newsreader", serif;
   --font-monospace: "Ubuntu Mono", ui-monospace, monospace;
   --color-fg: white;
   --color-bg: black;
@@ -57,7 +74,7 @@ body {
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  font-family: var(--font-sans);
+  font-family: var(--font-general);
   font-size: 1.2rem;
   padding-left: 5%;
   padding-right: 5%;
@@ -121,6 +138,8 @@ sup a {
 main article {
   max-width: 75ch;
   margin-inline: auto;
+  font-family: var(--font-writing);
+
 }
 
 header#writing_header nav {
@@ -151,4 +170,8 @@ li {
   background-image: url("/assets/feed-icon/feed-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+[lang="ja"] {
+  font-family: "Noto Sans JP", "Noto Sans CJK JP", ui-sans-serif, sans-serif;
 }
