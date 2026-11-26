@@ -134,12 +134,13 @@ sup a {
   text-decoration: none;
 }
 
-/* Limit width for readability. */
 main article {
+  /* Limit width for readability. */
   max-width: 75ch;
   margin-inline: auto;
-  font-family: var(--font-writing);
 
+  font-family: var(--font-writing);
+  font-size: 1.3rem;
 }
 
 header#writing_header nav {
